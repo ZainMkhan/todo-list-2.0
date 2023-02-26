@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;;
+    background-color: #00DBDE;
+    background-image: linear-gradient(124deg, #00DBDE 0%, #FC00FF 100%);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}  
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Scroll Styling */
+body::-webkit-scrollbar{
+    display: none;
+  }
+
+/* Some styling classes for Glass backgrounds */
+
+.glass{
+background: rgba(255, 255, 255, 0.29);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.6px);
+-webkit-backdrop-filter: blur(5.6px);
+border: 1px solid rgba(255, 255, 255, 0.39);
+}
+
+.gold-glass{
+background: rgba(255, 255, 0, 0.51);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.8px);
+-webkit-backdrop-filter: blur(7.8px);
+border: 1px solid rgba(255, 255, 0, 0.3);
+}
+
+.blue-glass{
+background: rgba(20, 134, 175, 0.75);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(20, 134, 175, 0.3);
+color: white;
+}
+
+.white-glass{
+background: rgba(255, 255, 255, 0.61);
+border-radius: 0.3em;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Navigation */
+
+.nav-container{
+    margin-top: 35px;
+    background-color: white;
+    border-radius: 1em;
+    border: 1px solid black;
+    width: 80%;
+    height: 70px;
+    position: relative;
+}
+
+.nav-ui{
+    width: 100%;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    width: 300px;
+    display: flex;
+    align-self: center;
+}
+
+.icon{
+    display: none;
+    margin: 0 15px;
+}
+
+/* Section */
+
+.container{
+    margin-top: 50px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.todo-list-container{
+    display: flex;
+    align-self: flex-start;
+    width: 80%;
+    height: 80%;
+    margin-right: 0.1em;
+    border-radius: 20px;
+    /* Scroll */
+    overflow-y: visible;
+    scrollbar-color: black black;
+    padding-bottom: 1%;
+}
+/* Add Task Button Styling */
+.add-task-btn{
+    position: fixed;
+    right: 2%;
+    top:88%;
+    width: 10%;
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.add-task-btn:hover{
+    border: 1px solid white;
+}
+
+/* Task Input Form Styling */
+
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task-input-form{
+    display: none;
+    width: 70%;
+    position: fixed ;
+    border-radius: 1em;
+    padding:1em;
+    left: 13%;
+    top: 86%;
+    z-index: 1;
+    transition: display 5s ease-in-out;
+}
+
+
+.task-input{
+    width: 90%;
+    padding: 1em;
+    font-size: 1em;
+    margin-right: 1em;
+}
+
+.add-task{
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+
+/* Styling Task */
+ul{
+    width: 100%;
+}
+.task-container{
+    margin-top: 0.5em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+
+.task{
+    margin: 20px 15px 20px 2px;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    list-style: none;
+    align-items: center;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    margin: 20px 30px 20px 5px;
+}
+
+.more-icon{
+    padding: 5px;
+} 
+
+.star-icon{
+    padding: 5px;
+}
+
+/* More Icon Menu */
+.more-menu-container{
+    display: none;
+    width: 6em;
+    position: absolute;
+    top:-40%;
+    left: 97%;
+    border-bottom-left-radius: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    transition: display 3s ease-out;
+}
+
+.edit , .delete{
+    padding: 0.4em;
+    font-size: 20px;
+}
+.check-icon{
+    width: 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    margin: 20px 15px 20px 10px;
+    color: green;
+}
+
+/* Important Section Styling */
+.imp-heading{
+    display: none;
+}
+.heading-imp{
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    margin-top:2%;
+    margin-left: 10%;
+}
+
+.mark-important{
+    display: none;
+    width: 15em;
+    top: 64%;
+    left:87%;
+    color: white;
+    background-color: black;
+    font-size: 10px;
+    padding: 1em;
+    position: absolute;
+    border-radius: 0.5em;
+    transition: display 2s ease-out;
+}
+
+.error{
+    display: none;
+    position: absolute;
+    top: 17%;
+    padding: 1em;
+    font-size: 1.2em;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    background-color: red;
+    color: white;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.error.show {
+    display: block;
+    opacity: 1;
+  }
+
+  .completed-task{
+    text-decoration: line-through;
+  }
